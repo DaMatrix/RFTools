@@ -893,16 +893,6 @@ public class BuilderTileEntity extends GenericEnergyReceiverTileEntity implement
 
         BlockPos minCorner = ShapeCardItem.getMinCorner(getPos(), dimension, offset);
         BlockPos maxCorner = ShapeCardItem.getMaxCorner(getPos(), dimension, offset);
-        if (minCorner.getY() < 0) {
-            minCorner = new BlockPos(minCorner.getX(), 0, minCorner.getZ());
-        } else if (minCorner.getY() > 255) {
-            minCorner = new BlockPos(minCorner.getX(), 255, minCorner.getZ());
-        }
-        if (maxCorner.getY() < 0) {
-            maxCorner = new BlockPos(maxCorner.getX(), 0, maxCorner.getZ());
-        } else if (maxCorner.getY() > 255) {
-            maxCorner = new BlockPos(maxCorner.getX(), 255, maxCorner.getZ());
-        }
 
         if (boxValid) {
             // Double check if the box is indeed still valid.
